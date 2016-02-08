@@ -1,10 +1,19 @@
 {
   "name": "grunt-tutorial",
   "version": "0.1.0",
+  "description": "This is a testing project to learn Grunt.js and other tools.",
+  "author": "Alexey Mironenko",
   "devDependencies": {
     "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jade": "^0.15.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.4.1",
-    "grunt-contrib-uglify": "~0.5.0"
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-notify": "^0.4.3",
+    "grunt-uncss": "^0.4.4",
+    "jade": "^1.11.0"
   }
 }
