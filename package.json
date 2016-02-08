@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "description": "This is a testing project to learn Grunt.js and other tools.",
   "author": "Alexey Mironenko",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexMarvelo/empty-project.git"
+  },
+  "license": "MIT",
   "devDependencies": {
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-imagemin": "^1.0.0",
