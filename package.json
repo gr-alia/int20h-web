@@ -1,7 +1,7 @@
 {
-  "name": "grunt-tutorial",
+  "name": "Empty project",
   "version": "0.1.0",
-  "description": "This is a testing project to learn Grunt.js and other tools.",
+  "description": "This is an empty project, that can be used to start quickly.",
   "author": "Alexey Mironenko",
   "repository": {
     "type": "git",
