@@ -2,18 +2,11 @@ module.exports = function(grunt){
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    uncss: {
-      dist: {
-        files: {
-          'css/main.tidy.css': ['*.html']
-        }
-      }
-    },
-
     sass: {
       dist: {
         files: {
-          'css/main.css': ['sass/main.sass']
+          'css/main.css': ['sass/main.sass'],
+          'css/fonts.css': ['sass/fonts.sass']
         }
       }
     },
@@ -37,13 +30,6 @@ module.exports = function(grunt){
           src: '*.css',
           dest: 'css/',
           ext: '.min.css'
-        },
-        {
-          expand: true,
-          cwd: 'css/',
-          src: '*.tidy.css',
-          dest: 'css/',
-          ext: '.tidy.min.css'
         }]
       }
     },
@@ -51,7 +37,7 @@ module.exports = function(grunt){
     jade: {
       compile: {
         options: {
-          pretty: true,
+          pretty: true
         },
         files: {
           'main.html': ['views/main.jade']
@@ -64,11 +50,13 @@ module.exports = function(grunt){
         files: ['Gruntfile.js']
       },
       jade: {
-        files: ['views/*.jade'],
+        files: ['views/*.jade',
+                'views/modules/*.jade',
+                'img/svg/*.svg'],
         tasks: ['jade']
       },
       sass: {
-        files: ['sass/*.sass'],
+        files: ['sass/*.sass', 'sass/modules/*.sass'],
         tasks: ['sass']
       }
     },
@@ -87,14 +75,13 @@ module.exports = function(grunt){
 
   grunt.registerTask('default', ['watch']);
 
-  grunt.loadNpmTasks('grunt-notify');
-  grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-notify');
 
   grunt.task.run('notify_hooks');
 };
