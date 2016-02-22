@@ -1,0 +1,12 @@
+head
+  meta(charset='utf-8')/
+  title=pageTitle
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')/
+  meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0")/
+  //- link(rel="shortcut icon" href="img/favicon.ico" type="image/png")/
+  link(type="text/css" rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css")/
+
+  link(type="text/css" rel="stylesheet" href="css/fonts.css")/
+  each cssModule in cssModulesOnPage
+    link(type="text/css" rel="stylesheet" href="#{cssModule}")/
+  link(type="text/css" rel="stylesheet" href="css/main.css")/
