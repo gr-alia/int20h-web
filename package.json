@@ -1,5 +1,5 @@
 {
-  "name": "Empty project",
+  "name": "empty-template",
   "version": "0.1.0",
   "description": "This is an empty project, that can be used to start quickly.",
   "author": "Alexey Mironenko",
@@ -9,6 +9,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "grunt": "^0.4.5",
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-imagemin": "^1.0.0",
     "grunt-contrib-jade": "^0.15.0",
@@ -18,7 +19,10 @@
     "grunt-contrib-uglify": "~0.11.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-notify": "^0.4.3",
-    "grunt-uncss": "^0.4.4",
-    "jade": "^1.11.0"
+    "grunt-uncss": "^0.4.4"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1"
   }
 }
