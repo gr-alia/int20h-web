@@ -10,9 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "bourbon": "^4.2.6",
     "jquery": "^2.2.1"
   },
-  "devDependencies": {
-
-  }
+  "devDependencies": {}
 }
