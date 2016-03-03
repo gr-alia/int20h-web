@@ -11,6 +11,21 @@ module.exports = function(grunt){
       }
     },
 
+    postcss: {
+      options: {
+        map: false,
+        processors: [
+          require('autoprefixer')({
+            browsers: ['last 3 versions']
+          })
+        ]
+      },
+      dist: {
+        src: 'css/*.css',
+        ext: '.css'
+      }
+    },
+
     uglify: {
       options: {
         manage: false
@@ -23,7 +38,7 @@ module.exports = function(grunt){
     },
 
     cssmin: {
-      my_target: {
+      minify: {
         files: [{
           expand: true,
           cwd: 'css/',
@@ -57,7 +72,7 @@ module.exports = function(grunt){
       },
       sass: {
         files: ['sass/*.sass', 'sass/modules/*.sass'],
-        tasks: ['sass']
+        tasks: ['sass', 'postcss']
       }
     },
 
@@ -76,6 +91,7 @@ module.exports = function(grunt){
 
   grunt.registerTask('default', ['watch']);
 
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
