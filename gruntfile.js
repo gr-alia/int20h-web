@@ -5,47 +5,17 @@ module.exports = function(grunt){
     sass: {
       dist: {
         files: {
-          'css/main.css': ['sass/main.sass'],
-          'css/fonts.css': ['sass/fonts.sass']
+          'css/main.css': ['styles/main.sass'],
+          'css/fonts.css': ['styles/fonts.sass']
         }
       }
     },
 
-    postcss: {
-      options: {
-        map: false,
-        processors: [
-          require('autoprefixer')({
-            browsers: ['last 3 versions']
-          })
-        ]
-      },
+    less: {
       dist: {
-        src: 'css/*.css',
-        ext: '.css'
-      }
-    },
-
-    uglify: {
-      options: {
-        manage: false
-      },
-      my_target: {
-        files: [{
-          'js/main.min.js': ['js/main.js']
-        }]
-      }
-    },
-
-    cssmin: {
-      minify: {
-        files: [{
-          expand: true,
-          cwd: 'css/',
-          src: '*.css',
-          dest: 'css/',
-          ext: '.min.css'
-        }]
+        files: {
+          'css/main.css': ['styles/main.less'],
+        }
       }
     },
 
@@ -71,8 +41,23 @@ module.exports = function(grunt){
         tasks: ['jade']
       },
       sass: {
-        files: ['sass/*.sass', 'sass/modules/*.sass'],
+        files: ['styles/*.sass', 'styles/modules/*.sass'],
         tasks: ['sass', 'postcss']
+      },
+      less: {
+        files: ['styles/*.less', 'styles/modules/*.less'],
+        tasks: ['less', 'postcss']
+      }
+    },
+
+    uglify: {
+      options: {
+        manage: false
+      },
+      my_target: {
+        files: [{
+          'js/main.min.js': ['js/main.js']
+        }]
       }
     },
 
@@ -85,6 +70,33 @@ module.exports = function(grunt){
           dest: 'img/minified/'
         }]
       }
+    },
+
+    postcss: {
+      options: {
+        map: false,
+        processors: [
+          require('autoprefixer')({
+            browsers: ['last 3 versions']
+          })
+        ]
+      },
+      dist: {
+        src: 'css/*.css',
+        ext: '.css'
+      }
+    },
+
+    cssmin: {
+      minify: {
+        files: [{
+          expand: true,
+          cwd: 'css/',
+          src: '*.css',
+          dest: 'css/',
+          ext: '.min.css'
+        }]
+      }
     }
 
   });
@@ -93,6 +105,7 @@ module.exports = function(grunt){
 
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jade');
