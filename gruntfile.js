@@ -25,7 +25,7 @@ module.exports = function(grunt){
           pretty: true
         },
         files: {
-          'main.html': ['views/main.jade']
+          'index.html': ['views/index.jade']
         }
       }
     },
@@ -36,27 +36,41 @@ module.exports = function(grunt){
       },
       jade: {
         files: ['views/*.jade',
-                'views/modules/*.jade',
+                'blocks/*/*.jade',
                 'img/svg/*.svg'],
         tasks: ['jade']
       },
       sass: {
-        files: ['styles/*.sass', 'styles/modules/*.sass'],
+        files: ['styles/*.sass', 'styles/modules/*.sass', 'blocks/*/*.sass'],
         tasks: ['sass', 'postcss']
       },
       less: {
-        files: ['styles/*.less', 'styles/modules/*.less'],
+        files: ['styles/*.less', 'styles/modules/*.less', 'blocks/*/*.less'],
         tasks: ['less', 'postcss']
+      },
+      concat: {
+        files: ['scripts/global.js', 'blocks/*/*.js'],
+        tasks: ['concat', 'uglify']
       }
+    },
+
+    concat: {
+      options: {
+        //separator: ';',
+      },
+      dist: {
+        src: ['scripts/global.js', 'blocks/*/*.js'],
+        dest: 'scripts/main.js',
+      },
     },
 
     uglify: {
       options: {
         manage: false
       },
-      my_target: {
+      uglify: {
         files: [{
-          'js/main.min.js': ['js/main.js']
+          'scripts/main.min.js': ['scripts/main.js']
         }]
       }
     },
@@ -103,14 +117,15 @@ module.exports = function(grunt){
 
   grunt.registerTask('default', ['watch']);
 
-  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-notify');
 
   grunt.task.run('notify_hooks');
