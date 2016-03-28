@@ -1,7 +1,7 @@
 {
-  "name": "empty-template",
+  "name": "markup-boilerplate",
   "version": "0.1.0",
-  "description": "This is an empty project, that can be used to start quickly.",
+  "description": "This is a boilerplate, that can be used to start markup developing quickly.",
   "author": "Alexey Mironenko",
   "repository": {
     "type": "git",
