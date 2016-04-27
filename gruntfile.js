@@ -1,132 +1,165 @@
-module.exports = function(grunt){
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+module.exports = function(grunt) {
+    require('load-grunt-tasks')(grunt);
 
-    sass: {
-      dist: {
-        files: {
-          'css/main.css': ['styles/main.sass'],
-          'css/fonts.css': ['styles/fonts.sass']
-        }
-      }
-    },
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
 
-    less: {
-      dist: {
-        files: {
-          'css/main.css': ['styles/main.less'],
-        }
-      }
-    },
-
-    jade: {
-      compile: {
-        options: {
-          pretty: true
+        sass: {
+            dist: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'build/css/main.css': ['styles/main.sass'],
+                    'build/css/fonts.css': ['styles/fonts.sass']
+                }
+            }
         },
-        files: {
-          'index.html': ['views/index.jade']
-        }
-      }
-    },
 
-    watch: {
-      grunt: {
-        files: ['Gruntfile.js']
-      },
-      jade: {
-        files: ['views/*.jade',
-                'blocks/*/*.jade',
-                'img/svg/*.svg'],
-        tasks: ['jade']
-      },
-      sass: {
-        files: ['styles/*.sass', 'styles/modules/*.sass', 'blocks/*/*.sass'],
-        tasks: ['sass', 'postcss']
-      },
-      less: {
-        files: ['styles/*.less', 'styles/modules/*.less', 'blocks/*/*.less'],
-        tasks: ['less', 'postcss']
-      },
-      concat: {
-        files: ['scripts/global.js', 'blocks/*/*.js'],
-        tasks: ['concat', 'uglify']
-      }
-    },
+        less: {
+            dist: {
+                files: {
+                    'css/main.css': ['styles/main.less'],
+                }
+            }
+        },
 
-    concat: {
-      options: {
-        //separator: ';',
-      },
-      dist: {
-        src: ['scripts/global.js', 'blocks/*/*.js'],
-        dest: 'scripts/main.js',
-      },
-    },
+        jade: {
+            compile: {
+                options: {
+                    pretty: true
+                },
+                files: {
+                    'build/index.html': ['views/index.jade']
+                }
+            }
+        },
 
-    uglify: {
-      options: {
-        manage: false
-      },
-      uglify: {
-        files: [{
-          'scripts/main.min.js': ['scripts/main.js']
-        }]
-      }
-    },
+        watch: {
+            grunt: {
+                files: ['Gruntfile.js']
+            },
+            jade: {
+                files: ['views/*.jade',
+                    'blocks/*/*.jade',
+                    'img/svg/*.svg'
+                ],
+                tasks: ['jade']
+            },
+            sass: {
+                files: ['styles/*.sass', 'styles/modules/*.sass', 'blocks/*/*.sass'],
+                tasks: ['sass', 'postcss']
+            },
+            less: {
+                files: ['styles/*.less', 'styles/modules/*.less', 'blocks/*/*.less'],
+                tasks: ['less', 'postcss']
+            },
+            concat: {
+                files: ['scripts/global.js', 'blocks/*/*.js'],
+                tasks: ['concat']
+            }
+        },
 
-    imagemin: {
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: 'img/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'img/minified/'
-        }]
-      }
-    },
+        concat: {
+            options: {
+                //separator: ';',
+            },
+            dist: {
+                src: ['scripts/global.js', 'blocks/*/*.js'],
+                dest: 'scripts/main.js',
+            },
+        },
 
-    postcss: {
-      options: {
-        map: false,
-        processors: [
-          require('autoprefixer')({
-            browsers: ['last 3 versions']
-          })
-        ]
-      },
-      dist: {
-        src: 'css/*.css',
-        ext: '.css'
-      }
-    },
+        uglify: {
+            options: {
+                manage: false
+            },
+            uglify: {
+                files: [{
+                    'build/js/min/main.min.js': ['build/js/main.js']
+                }]
+            }
+        },
 
-    cssmin: {
-      minify: {
-        files: [{
-          expand: true,
-          cwd: 'css/',
-          src: '*.css',
-          dest: 'css/',
-          ext: '.min.css'
-        }]
-      }
-    }
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'img/minified/'
+                }]
+            }
+        },
 
-  });
+        postcss: {
+            options: {
+                map: false,
+                processors: [
+                    require('autoprefixer')({
+                        browsers: ['last 3 versions']
+                    })
+                ]
+            },
+            dist: {
+                src: 'css/*.css',
+                ext: '.css'
+            }
+        },
 
-  grunt.registerTask('default', ['watch']);
+        cssmin: {
+            minify: {
+                files: [{
+                    expand: true,
+                    cwd: 'build/css/',
+                    src: '*.css',
+                    dest: 'build/css/min',
+                    ext: '.min.css'
+                }]
+            }
+        },
 
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-jade');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-notify');
+        copy: {
+            libs: {
+                expand: true,
+                cwd: './',
+                src: [
+                    './node_modules/jquery/dist/jquery.min.js',
+                    './node_modules/bootstrap/dist/css/bootstrap.min.css',
+                ],
+                dest: 'build/libs/',
+                flatten: true,
+                filter: 'isFile',
+            },
+            js: {
+                expand: true,
+                cwd: './scripts/',
+                src: ['main.js', ],
+                dest: 'build/js/',
+                flatten: true,
+                filter: 'isFile',
+            },
+            fonts: {
+                expand: true,
+                cwd: './fonts/',
+                src: ['./**', ],
+                dest: 'build/fonts/',
+                flatten: true,
+                filter: 'isFile',
+            },
+            imgs: {
+                expand: true,
+                cwd: './',
+                src: ['./img/*'],
+                dest: 'build/img/',
+                flatten: true,
+                filter: 'isFile',
+            }
+        },
+    });
 
-  grunt.task.run('notify_hooks');
+    grunt.registerTask('compile', ['jade', 'sass', 'postcss', 'concat', 'copy']);
+    grunt.registerTask('minimize', ['uglify', 'cssmin']);
+    grunt.registerTask('default', ['compile', 'watch']);
+    grunt.task.run('notify_hooks');
 };
