@@ -158,7 +158,7 @@ module.exports = function(grunt) {
         },
     });
 
-    grunt.registerTask('compile', ['jade', 'sass', 'postcss', 'concat', 'copy']);
+    grunt.registerTask('compile', ['jade', 'sass', 'concat', 'copy']);
     grunt.registerTask('minimize', ['uglify', 'cssmin']);
     grunt.registerTask('default', ['compile', 'watch']);
     grunt.task.run('notify_hooks');
