@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 	require('load-grunt-tasks')(grunt);
+	
+	var PRODUCTION = process.env.NODE_ENV == 'production';
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -11,7 +13,7 @@ module.exports = function(grunt) {
 				},
 				options: {
 					browserifyOptions: {
-						debug: !process.env.PRODUCTION,
+						debug: !PRODUCTION,
 					}
 				}
 			},
@@ -24,8 +26,8 @@ module.exports = function(grunt) {
 					'build/css/fonts.css': ['styles/fonts.scss'],
 				},
 				options: {
-					style: process.env.PRODUCTION ? 'compact' : 'expanded',
-					sourcemap: process.env.PRODUCTION ? 'none' : 'file',
+					style: PRODUCTION ? 'compact' : 'expanded',
+					sourcemap: PRODUCTION ? 'none' : 'file',
 				}
 			}
 		},
@@ -41,7 +43,7 @@ module.exports = function(grunt) {
 		jade: {
 			compile: {
 				options: {
-					pretty: !process.env.PRODUCTION,
+					pretty: !PRODUCTION,
 				},
 				files: {
 					'build/index.html': ['views/index.jade'],
@@ -99,7 +101,7 @@ module.exports = function(grunt) {
 
 		autoprefixer: {
 			options: {
-				map: !process.env.PRODUCTION,
+				map: !PRODUCTION,
 				browsers: ['last 3 versions'],
 			},
 			dist: {
@@ -150,7 +152,7 @@ module.exports = function(grunt) {
 	});
 
 	var buildTasks = ['clean', 'jade', 'sass', 'browserify', 'copy'];
-	if (process.env.PRODUCTION) {
+	if (PRODUCTION) {
 		buildTasks.push('minimize');
 	}
 

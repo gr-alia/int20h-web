@@ -14,7 +14,7 @@
   "scripts": {
     "grunt": "grunt",
     "build": "grunt build",
-    "build:prod": "PRODUCTION=true grunt build",
+    "build:prod": "NODE_ENV=production grunt build",
     "lint": "eslint ./",
     "serve-test": "browser-sync start --server --files 'build/*.html'",
     "serve": "http-server ./build"
@@ -22,6 +22,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
     "bourbon": "^4.2.6",
+    "grunt-cli": "^1.2.0",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.5"
   },
