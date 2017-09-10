@@ -1,0 +1,6 @@
+@import "imports";
+
+@include font-face("SourceSansPro", "../fonts/SourceSansPro-Regular", normal, $file-formats: ttf);
+@include font-face("SourceSansPro", "../fonts/SourceSansPro-Bold", bold, $file-formats: ttf);
+@include font-face("SourceSansPro", "../fonts/SourceSansPro-Light", 300, $file-formats: ttf);
+@include font-face("SourceSansPro", "../fonts/SourceSansPro-SemiBold", 500, $file-formats: ttf);

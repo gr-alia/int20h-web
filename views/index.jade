@@ -1,12 +1,13 @@
 doctype html
 html(lang="en")
-    - var pageTitle=""
-    - var cssModulesOnPage = ['']
-    - var jsModulesOnPage = []
-    include ../blocks/head/head.jade
-    body
-        include ../blocks/pageHeader/pageHeader.jade
+	title Boilerplate page
+	- var pageTitle=""
+	- var cssModulesOnPage = []
+	- var jsModulesOnPage = []
+	include ../components/head/head.jade
+	body
+		include ../components/pageHeader/pageHeader.jade
 
-
-        include ../blocks/pageFooter/pageFooter.jade
-        include ../blocks/scriptList/scriptList.jade
+		h1 Hello
+		include ../components/pageFooter/pageFooter.jade
+		include ../components/scriptList/scriptList.jade
