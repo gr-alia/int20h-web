@@ -1,7 +1,8 @@
 @import "imports";
-@import "../node_modules/bootstrap/scss/bootstrap-grid";
-
+//@import "../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../components/mainPage/mainPage";
 
 body {
 	padding: 0;
+	background: #dbe1d5;
 }
