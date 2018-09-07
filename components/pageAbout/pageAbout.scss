@@ -1,0 +1,36 @@
+.pageAbout-title{
+    font-family: Akrobat;
+    font-size: 146px;
+    font-weight: 900;
+    position: relative;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    text-align: left;
+    color: #2fa7ac;
+    &:after {
+        content: "Int20h";
+        position: absolute;
+        left: -6px;
+        top: -6px;
+        color: #dd3a28; 
+        mix-blend-mode: multiply;
+    }
+}
+
+.pageAbout-slogan{
+    font-size: 72px;
+    font-weight: normal;
+    color: #2fa7ac;
+}
+p{
+    color: #070707;
+    font-size: 35px;
+    text-align: left;
+}
+.pageAbout-1{
+    white-space: pre;
+}
+.pageAbout-2{
+    white-space: pre;
+}

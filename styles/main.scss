@@ -1,8 +1,15 @@
 @import "imports";
 //@import "../node_modules/bootstrap/scss/bootstrap-grid";
-@import "../components/mainPage/mainPage";
+@import "../components/pageMain/pageMain";
+@import "../components/pageAbout/pageAbout";
+@import "../components/pageCategory/pageCategory";
+@import "../components/pageBenefits/pageBenefits";
+@import "../components/pageConditions/pageConditions";
+@import "../components/pageLast/pageLast";
+
 
 body {
 	padding: 0;
 	background: #dbe1d5;
+	font-family: Akrobat;
 }
