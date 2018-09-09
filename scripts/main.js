@@ -1,2 +1,2 @@
 require('../components/pageHeader/pageHeader');
-require('../components/pageFooter/pageFooter');
+require('../components/timer/timer');

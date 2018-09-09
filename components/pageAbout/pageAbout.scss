@@ -1,20 +1,6 @@
-.pageAbout-title{
-    font-family: Akrobat;
-    font-size: 146px;
-    font-weight: 900;
-    position: relative;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    text-align: left;
-    color: #2fa7ac;
+.pageAbout-title {
     &:after {
-        content: "Int20h";
-        position: absolute;
-        left: -6px;
-        top: -6px;
-        color: #dd3a28; 
-        mix-blend-mode: multiply;
+        content: "Про Int20h";
     }
 }
 
@@ -22,6 +8,7 @@
     font-size: 72px;
     font-weight: normal;
     color: #2fa7ac;
+    margin-left: 120px
 }
 p{
     color: #070707;

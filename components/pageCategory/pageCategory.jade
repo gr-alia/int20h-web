@@ -1,5 +1,9 @@
-div.pageCategory
-    h1.pageCategory-title Категорії
-    ul
-    each val in ["Web-development", "Mobile development", "Blockchain", "Data Science"]
-        li= val
+.pageCategory
+    .innerLightDiv
+        h1.pageCategory-title Категорії
+        .categoryDiv
+            ul(style='list-style-type:none')
+                each obj in [{ name: "Web-development", url: "web-dev"}, {name: "Mobile development", url: "mobile-dev"}, {name:"Blockchain", url:"blockchain"}, {name:"Data Science", url:"data_science"} ]
+                    li
+                        img(src="img/#{obj.url}_pictogram.png", alt="").categoryImg
+                        span.categoryName #{obj.name}

@@ -1,15 +1,17 @@
 @import "imports";
-//@import "../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "../node_modules/bootstrap/scss/bootstrap-grid";
 @import "../components/pageMain/pageMain";
 @import "../components/pageAbout/pageAbout";
+@import "../components/timer/timer";
 @import "../components/pageCategory/pageCategory";
 @import "../components/pageBenefits/pageBenefits";
 @import "../components/pageConditions/pageConditions";
 @import "../components/pageLast/pageLast";
+@import "../components/anaglyphTitle/anaglyphTitle";
 
 
 body {
-	padding: 0;
 	background: #dbe1d5;
 	font-family: Akrobat;
 }

@@ -1,0 +1,30 @@
+.timerDiv {
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    > div {
+      border: 1px solid;
+      padding: 10px;
+      box-shadow: 6px 10px #2fa7ac;
+      padding: 10px;
+      border-radius: 3px;
+      background: #dd0000;
+      display: inline-block;
+    }
+    div > span {
+      padding: 15px;
+      border-radius: 3px;
+      background: #7c272c;
+      display: inline-block;
+      color: #dbe1d5;
+      min-width: 56px;
+    }
+  }
+  
+  .smalltext {
+    padding-top: 5px;
+    font-size: 16px;
+    color: #dbe1d5;
+  }
