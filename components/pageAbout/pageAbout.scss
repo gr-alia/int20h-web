@@ -1,9 +1,9 @@
-.pageAbout-title {
+@charset "utf-8";
+.pageAbout-title{
     &:after {
         content: "Про Int20h";
     }
 }
-
 .pageAbout-slogan{
     font-size: 72px;
     font-weight: normal;
