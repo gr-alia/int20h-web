@@ -1,9 +1,9 @@
 .pageCategory
     .innerLightDiv
         h1.pageCategory-title Категорії
-        .categoryDiv
-            ul(style='list-style-type:none')
-                each obj in [{ name: "Web-development", url: "web-dev"}, {name: "Mobile development", url: "mobile-dev"}, {name:"Blockchain", url:"blockchain"}, {name:"Data Science", url:"data_science"} ]
-                    li
+        ul.pageCategory-list
+            each obj in [{ name: "Web-development", url: "web-dev"}, {name: "Mobile development", url: "mobile-dev"}, {name:"Blockchain", url:"blockchain"}, {name:"Data Science", url:"data_science"} ]
+                li.pageCategory-category
+                    .pageCategory-img
                         img(src="img/#{obj.url}_pictogram.png", alt="").categoryImg
-                        span.categoryName #{obj.name}
+                    span.pageCategory-name #{obj.name}
