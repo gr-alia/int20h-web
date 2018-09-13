@@ -1,27 +1,52 @@
-.pageMain-logo{
-    width: 100%;
-    margin-left: 120px;
-    margin-top: 120px;
+.pageMain-logoCol {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.pageMain-title{
+.pageMain-logo {
+    height: 80%;
+    max-height: 400px;
+}
+
+.pageMain-titleCol {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pageMain-title {
     font-size: 4rem;
     font-weight: normal;
     line-height: 1.25;
+    font-weight: 300;
     margin-bottom: 0;
     text-align: right;
     color: $main-color;
+    padding-right: 13%;
+    margin-top: 260px;
+    margin-bottom: 30px;
 }
 
-.pageMain-subtitle{
-    font-size: 4rem;
-    font-weight: normal;
-    line-height: 1.25;
-    margin-bottom: 0;
-    text-align: right;
-    color: $main-color;
-}
+// .pageMain-subtitle{
+//     font-size: 4rem;
+//     font-weight: normal;
+//     line-height: 1.25;
+//     margin-bottom: 0;
+//     text-align: right;
+//     color: $main-color;
+// }
+
 .pageMain-registerButton{
     font-size: 40px;
     color: #dbe1d5;
+    background: red;
+    padding: 2px 10px;
+    margin: 0;
+    border-radius: 4px;
+    align-self: flex-start;
+    cursor: pointer;
 }
+
