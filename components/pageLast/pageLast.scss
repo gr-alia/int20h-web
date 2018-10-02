@@ -1,6 +1,30 @@
 @charset "utf-8";
 .pageLast-title{
     &:after {
-        content: "Як це було минулого року";
+        content: "Як це було раніше";
     }
+}
+.lastImgSm{
+    width: 50%;
+    height: auto;
+    border-color: $main-color-red;
+    border-style: solid;
+}
+
+.lastImgSmLeft{
+    border-width: 3px 3px 3px 6px;
+}
+
+.lastImgSmRight{
+    border-width: 3px 6px 3px 3px;
+}
+.lastImgSmTop{
+    width: 100%;
+    height: auto;
+    border-color: $main-color-red;
+    border-style: solid;
+    border-width: 6px 6px 3px 6px;
+}
+.lastImgSmBottom{
+border-bottom-width: 6px;
 }

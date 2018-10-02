@@ -18,13 +18,14 @@
 }
 
 .pageMain-title {
+    position: relative;
     font-size: 4rem;
     font-weight: normal;
     line-height: 1.25;
     font-weight: 300;
     margin-bottom: 0;
     text-align: right;
-    color: $main-color;
+    color: $main-color-green;
     padding-right: 13%;
     margin-top: 260px;
     margin-bottom: 30px;
@@ -36,17 +37,32 @@
 //     line-height: 1.25;
 //     margin-bottom: 0;
 //     text-align: right;
-//     color: $main-color;
+//     color: $main-color-green;
 // }
+.buttonBox{
+    position: absolute;
+    bottom: 0;
+    right: 13%;
+    width: 344px;
+    height: 100px;
+    background:  url("../img/green_brush_stroke.png") no-repeat right bottom;
+    cursor: pointer;
+}
 
 .pageMain-registerButton{
-    font-size: 40px;
+    width: 312px;
+    display: inline-block;
+    font-size: 35px;
+    line-height: 30px;
+    margin-top: -5px; 
+    font-family: Akrobat-Bold;
     color: #dbe1d5;
-    background: red;
-    padding: 2px 10px;
+    background: url("../img/red_brush_stroke.png") no-repeat;
+    padding: 31px 32px 28px 24px;
     margin: 0;
-    border-radius: 4px;
-    align-self: flex-start;
+    font-weight: 900;
+    outline:none;
+    border: 0px;  
     cursor: pointer;
 }
 
