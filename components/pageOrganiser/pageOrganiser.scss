@@ -7,17 +7,54 @@
 .orgContainer{
     color: $color-white;
     font-family: Akrobat;
-    font-size: 35px;
     text-align: left;
 }
+.imgBox{
+    width: 50%;
+    height: auto;
+    padding: 0px;
+    background-size: cover;
+}
+.img01{
+    background-image: url("../img/01_org.png");
+}
+.img02{
+    background-image: url("../img/02_org.png");
+}
+.img03{
+    background-image: url("../img/03_org.png");
+}
+.img04{
+    background-image: url("../img/04_org.png");
+}
+.img05{
+    background-image: url("../img/05_org.png");
+}
 .textBoxLeft{
+    width: 50%;
+    height: auto;
     background-color: $main-color-red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px;
 }
 .textBoxRight{
+    width: 50%;
+    height: auto;
     background-color: $main-color-green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px;
+}
+.pageOrganiser-text{
+    font-size: 3rem;
+    margin: 30px;
 
 }
-.pageOrganiser-text{}
 .details{
-    font-size: 20px; 
+    font-size: 2rem; 
 }

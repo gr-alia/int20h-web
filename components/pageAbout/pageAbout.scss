@@ -1,18 +1,21 @@
 @charset "utf-8";
+
 .pageAbout-title{
     &:after {
         content: "Про Int20h";
     }
 }
+
 .pageAbout-slogan{
-    font-size: 72px;
-    font-weight: normal;
+    font-size: 7.2rem;
+    font-weight: bold;
     color: $main-color-green;
     margin-left: 120px
 }
+
 p{
     color: #070707;
-    font-size: 35px;
+    font-size: 3.5rem;
     text-align: left;
 }
 .pageAbout-1{
@@ -20,4 +23,9 @@ p{
 }
 .pageAbout-2{
     white-space: pre;
+}
+.pageAbout-timerTitle{
+    font-weight: bold;
+    font-size: 3.5rem;
+    color: $color-text-black;
 }

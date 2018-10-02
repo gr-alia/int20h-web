@@ -19,7 +19,7 @@
 
 .pageMain-title {
     position: relative;
-    font-size: 4rem;
+    font-size: 7.5rem;
     font-weight: normal;
     line-height: 1.25;
     font-weight: 300;
@@ -31,14 +31,6 @@
     margin-bottom: 30px;
 }
 
-// .pageMain-subtitle{
-//     font-size: 4rem;
-//     font-weight: normal;
-//     line-height: 1.25;
-//     margin-bottom: 0;
-//     text-align: right;
-//     color: $main-color-green;
-// }
 .buttonBox{
     position: absolute;
     bottom: 0;
@@ -52,10 +44,10 @@
 .pageMain-registerButton{
     width: 312px;
     display: inline-block;
-    font-size: 35px;
+    font-size: 3.5rem;
     line-height: 30px;
     margin-top: -5px; 
-    font-family: Akrobat-Bold;
+    font-family: Akrobat;
     color: #dbe1d5;
     background: url("../img/red_brush_stroke.png") no-repeat;
     padding: 31px 32px 28px 24px;
