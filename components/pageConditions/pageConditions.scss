@@ -1,16 +1,26 @@
+.pageConditions {
+	padding: 85px 0;
+}
+
 .pageConditions-title{
 	color: $main-color-green;
-	font-family: Akrobat;
+	line-height: 1;
     font-size: 14.6rem;
 	font-weight: 900;
-	margin-left: 120px;
+	margin-left: 10%;
+	margin-bottom: 30px;
 }
-.listTypeIcon{
-	width: 65px;
-	height: 65px;
-	margin: 10px;
-}
-.conditionName{
-	font-size: 7.5rem;
+
+.conditionsDiv {
+	list-style-type: none;
+	font-size: 5.5rem;
+	line-height: 1.4;
+	padding-left: 15%;
 	color: #762a2f;
+}
+
+.listTypeIcon{
+	width: 40px;
+	height: 40px;
+	margin: 10px;
 }

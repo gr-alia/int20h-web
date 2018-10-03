@@ -1,11 +1,39 @@
 @charset "utf-8";
-.pageLast-title{
+
+.pageLast {
+    padding: 40px 0;
+}
+
+.pageLast-titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.pageLast-title {
+    margin-bottom: 0;
+
     &:after {
         content: "Як це було раніше";
     }
 }
+
+.pageLast-photos {
+    margin-left: 0;
+    margin-right: auto;
+    width: 80%;
+
+    .col-md-6,
+    .col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 .lastImgSm{
-    width: 50%;
+    width: 100%;
     height: auto;
     border-color: $main-color-red;
     border-style: solid;

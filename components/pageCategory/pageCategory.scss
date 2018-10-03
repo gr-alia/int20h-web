@@ -13,8 +13,9 @@
 
 .pageCategory-title {
 	color: $main-color-green;
-	font-family: Akrobat;
+	
 	font-size: 14.6rem;
+	line-height: 1;
 	font-weight: 900;
 	margin-left: 10%;
 	margin-bottom: 0;
@@ -22,11 +23,11 @@
 
 .pageCategory-list {
 	background: $main-color-green;
-	font-size: 7.5rem;
+	font-size: 4.5rem;
 	color: #dbe1d5;
 	margin-bottom: 0;
 	list-style: none;
-	padding: 15px 0;
+	padding: 25px 0;
 }
 
 .pageCategory-category {
@@ -40,12 +41,13 @@
 
 .pageCategory-img {
 	flex-basis: 20%;
+	height: 67px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
 	> img {
-		width: 80px;
+		height: 100%;
 	}
 }
 

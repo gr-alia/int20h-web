@@ -1,35 +1,48 @@
 @charset "utf-8";
+
+.pageBenefits {
+    padding-bottom: 30px;
+}
+
 .pageBenefits-title{
     &:after {
         content: "Що отримують учасники";
     }
 }
-.card{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.pageBenefits-card{
-    width: 366px;
-    height: 362px;
-    display: block;
+
+.pageBenefits-card {
+    width: 100%;
+    max-width: 250px;
+    min-height: 205px;
     border-radius: 15px;
     background-color: #dd3a28;
-    padding-bottom: 16px;
-    padding-top: 16px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 16px 20px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    &.alignLeft {
+        margin-left: 15px;
+    }
+
+    &.alignRight { 
+        margin-right: 15px;
+    }
+
 }
+
 .pageBenefits-text{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    line-height: 1.1;
     color:#ffffff;
     font-weight: 900;
     text-align: center;
 }
+
 .pageBenefits-img{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    max-width: 50%;
 }

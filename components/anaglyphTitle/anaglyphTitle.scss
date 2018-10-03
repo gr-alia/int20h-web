@@ -1,13 +1,13 @@
-.anaglyphTitle{
-    font-family: Akrobat;
+.anaglyphTitle {
     font-size: 14.6rem;
+    line-height: 1;
     font-weight: bold;
     position: relative;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
     text-align: left;
-    margin-left: 120px;
+    margin-left: 10%;
+    margin-bottom: 30px;
     color: $main-color-green;
 
     &:after {
@@ -17,4 +17,9 @@
         color: $main-color-red; 
         mix-blend-mode: multiply;
     }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 12rem;
+    }
 }
+
