@@ -1,5 +1,5 @@
 .anaglyphTitle {
-    font-size: 14.6rem;
+    font-size: 9.6rem;
     line-height: 1;
     font-weight: bold;
     position: relative;
@@ -12,8 +12,8 @@
 
     &:after {
         position: absolute;
-        left: -6px;
-        top: -6px;
+        left: -4px;
+        top: -4px;
         color: $main-color-red; 
         mix-blend-mode: multiply;
     }

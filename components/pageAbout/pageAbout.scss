@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 .pageAbout {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 
     p {
-        color: #070707;
-        font-size: 3.5rem;
+        color: $color-text-black;
+        font-size: 3.4rem;
         text-align: left;
     }
 }
@@ -15,18 +15,22 @@
         content: "Про Int20h";
     }
 }
+.sloganBox{
+    display: flex;
+    align-items: center; 
+}
 
 .pageAbout-slogan{
-    font-size: 7.2rem;
+    font-size: 6rem;
     line-height: 1.2;
-    font-weight: bold;
+    font-weight: 400;
     color: $main-color-green;
     width: 80%;
     margin-left: auto;
 }
 
 .pageAbout-secondRow {
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .pageAbout-1 {
@@ -39,7 +43,7 @@
 }
 
 .pageAbout-timerTitle{
-    font-weight: bold;
-    font-size: 3.5rem;
+    font-weight: 500;
+    font-size: 3.4rem;
     color: $color-text-black;
 }
