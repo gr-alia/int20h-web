@@ -3,13 +3,15 @@
 		.col-md-5.pageLast-titleContainer
 			h1.anaglyphTitle.pageLast-title Як це було раніше
 		.col-md-7
-			.container-fluid.pageLast-photos
+			.container-fluid.pageLast-photos.gallery-last(data-chocolat-title='Set title')
 				.row
 					.col-md-12
-						img(src="img/sm/01_small.png", alt="").lastImgSmTop
+						a.chocolat-image(href='img/lg/01_large.JPG', title='image caption a')
+							img(src="img/sm/01_small.png", alt="").lastImgSmTop
 				.row
 					.col-md-6
-						img(src="img/sm/02_small.png", alt="").lastImgSm.lastImgSmLeft
+						a.chocolat-image(href='img/lg/02_large.JPG', title='image caption b')
+							img(src="img/sm/02_small.png", alt="").lastImgSm.lastImgSmLeft
 					.col-md-6
 						img(src="img/sm/03_small.png", alt="").lastImgSm.lastImgSmRight
 					.col-md-6
