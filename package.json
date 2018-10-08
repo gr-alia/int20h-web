@@ -23,8 +23,7 @@
     "bootstrap": "^4.0.0-beta",
     "bourbon": "^4.2.6",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.5",
-    "unitegallery": "^1.7.28"
+    "popper.js": "^1.12.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
