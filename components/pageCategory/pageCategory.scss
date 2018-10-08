@@ -5,7 +5,7 @@
 
 .innerLightDiv {
 	width: 100%;
-	background: #dbe1d5;
+	background: $main-color-beige;
 	max-width: 900px;
 	margin-left: auto;
 	padding: 10px;
@@ -24,7 +24,7 @@
 .pageCategory-list {
 	background: $main-color-green;
 	font-size: 4.5rem;
-	color: #dbe1d5;
+	color: $main-color-beige;
 	margin-bottom: 0;
 	list-style: none;
 	padding: 34px 0;

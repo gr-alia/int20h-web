@@ -1,6 +1,7 @@
 @import "imports";
 @import "../node_modules/bootstrap/scss/bootstrap-reboot";
 @import "../node_modules/bootstrap/scss/bootstrap-grid";
+@import "./libs/chocolat.scss";
 @import "../components/pageMain/pageMain";
 @import "../components/pageAbout/pageAbout";
 @import "../components/timer/timer";
@@ -20,6 +21,6 @@ html {
 }
 
 body {
-	background: #dbe1d5;
+	background: $main-color-beige;
 	font-family: Akrobat;
 }
