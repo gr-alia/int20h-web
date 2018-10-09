@@ -1,0 +1,76 @@
+.pageContacts{
+	background-color: $main-color-green;
+	
+}
+.pageContacts-title{
+	color: $main-color-beige;
+    font-size: 9.6rem;
+	font-weight: 900;
+	margin-left: 10%;
+}
+
+.contactsContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.contact{
+	width: 25%;	
+	color: $main-color-green;
+	font-size: 1.6rem;
+	padding: 0 20px;
+}
+
+.imageDiv{
+	
+	
+
+	img{
+		width: 100%;
+		
+		border-radius: 50%;
+	}
+}
+.nameDiv{
+	width: 100%;
+	padding: 16px;
+	margin-top: 10px;
+	min-height: 131px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background-color: $main-color-beige;
+
+	.name{
+		font-size: 3.4rem;
+		font-weight: 700; 
+	}
+	
+}
+
+.linkDiv{
+	width: 100%;
+	padding: 16px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: $main-color-beige;
+}
+
+.iconFb{
+	width: 24px;
+
+}
+.emptyDiv{
+	width: 100%;
+	height: 30px;
+	margin-top: 10px;
+	background-color: $main-color-beige;
+}
+
+
+

@@ -1,2 +1,16 @@
 .pageContacts
 	h1.pageContacts-title Контакти
+	.contactsContainer
+			each obj in [{ name: "Катерина", position: "головний організатор", email: "estefanovich1@gmail.com", phone:"+380638691700", link: "https://www.facebook.com/profile.php?id=100011212662293", img: "kate.png"}, {name: "Анастасія", position: "відділ корпоративних зв'язків", email: "nastiashel@gmail.com", phone:"+380931349664", link: "https://www.facebook.com/nastiashel", img: "anastasia.png"},{name:"Ірина", position:"відділ корпоративних зв'язків", email: "bezkrovnairyna@gmail.com", phone:"+380999279865", link: "https://www.facebook.com/irina.bezkrovnaya.9", img: "irene.png"} ]
+				.contact
+					.imageDiv
+						img(src="img/#{obj.img}")
+					.nameDiv
+						span.name #{obj.name}
+						span.position #{obj.position}
+					.linkDiv
+						span.email #{obj.email}
+						span.phone #{obj.phone}
+						a(href='#{obj.link}').linkFb
+							img(src="img/fb.png").iconFb
+					.emptyDiv
