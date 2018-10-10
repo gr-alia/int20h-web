@@ -1,4 +1,7 @@
-var $= require('jquery');
+var $ = require('jquery');
+window.jQuery = $; // make jQuery visible from global scope for libs
+window.$ = $;
+
 require('chocolat');
 require('slick-carousel');
 require('flip');
