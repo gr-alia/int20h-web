@@ -2,12 +2,16 @@
 
 .pageBenefits {
     padding-bottom: 30px;
-}
+    position: relative;
 
-.pageBenefits-title{
-    &:after {
-        content: "Що отримують учасники";
+    .anaglyphTitle{
+        position: absolute;
+        top: -110px;
+        &:after {
+            content: "Що отримують учасники";
+        }
     }
+
 }
 
 .pageBenefits-card {
