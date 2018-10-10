@@ -23,6 +23,7 @@
     "bootstrap": "^4.0.0-beta",
     "bourbon": "^4.2.6",
     "chocolat": "^0.4.20",
+    "flip": "github:nnattawat/flip",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.5",
     "slick-carousel": "^1.8.1"
