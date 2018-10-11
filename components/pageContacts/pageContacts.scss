@@ -1,6 +1,6 @@
 .pageContacts{
 	background-color: $main-color-green;
-	
+	overflow: hidden;
 }
 .pageContacts-title{
 	color: $main-color-beige;
@@ -65,8 +65,8 @@
 
 .iconFb{
 	width: 24px;
-
 }
+
 .emptyDiv{
 	width: 100%;
 	height: 30px;
@@ -74,5 +74,10 @@
 	background-color: $main-color-beige;
 }
 
+.slick-dots {
+	bottom: 4px;
+}
 
-
+.slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
