@@ -14,11 +14,37 @@
 
 }
 
+.pageBenefits-cardContainer {
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    justify-content: center;
+}
+
+.pageBenefits-cardContainer-1,
+.pageBenefits-cardContainer-4 {
+    @include for-big-tablet-and-desktop() {
+        justify-content: flex-end;
+    }
+}
+
+.pageBenefits-cardContainer-2 {
+    @include for-big-tablet-and-desktop() {
+        justify-content: center;
+    }
+}
+
+.pageBenefits-cardContainer-3,
+.pageBenefits-cardContainer-5 {
+    @include for-big-tablet-and-desktop() {
+        justify-content: flex-start;
+    }
+}
+
 .pageBenefits-card {
     width: 100%;
     max-width: 250px;
     min-height: 205px;
-    margin: 25px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
