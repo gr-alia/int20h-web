@@ -1,20 +1,40 @@
 .pageMain-logoCol {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include for-mobile-and-tablet() {
+        justify-content: center;
+    }
 }
 
 .pageMain-logo {
     height: 80%;
     max-height: 400px;
+
+    @include for-mobile-and-tablet() {
+        width: 100%;
+        max-width: 507px;
+        height: auto;
+    }
 }
 
 .pageMain-titleCol {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.pageMain-logoCol, 
+.pageMain-titleCol {
+    @include for-desktop() {
+        height: 100vh;
+    }
+
+    @include for-mobile-and-tablet() {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 }
 
 .pageMain-title {

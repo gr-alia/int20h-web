@@ -13,25 +13,34 @@
 
 .pageCategory-title {
 	color: $main-color-green;
-	
-	font-size: 9.6rem;
 	line-height: 1;
 	font-weight: 900;
 	margin-left: 10%;
 	margin-bottom: 0;
+	font-size: 9.6rem;
+
+	@include for-mobile() {
+		font-size: 6rem;
+	}
 }
 
 .pageCategory-list {
 	background: $main-color-green;
-	font-size: 4.5rem;
 	color: $main-color-beige;
 	margin-bottom: 0;
 	list-style: none;
-	padding: 34px 0;
+	padding: 34px 10px;
+	font-size: 4.5rem;
+	line-height: 1;
+
+	@include for-mobile() {
+		font-size: 3rem;
+	}
 }
 
 .pageCategory-category {
 	display: flex;
+	align-items: center;
 	margin-bottom: 15px;
 
 	&:last-child {
@@ -52,5 +61,6 @@
 }
 
 .pageCategory-name {
+	padding-left: 10px;
 	flex-grow: 2;
 }
