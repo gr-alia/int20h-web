@@ -7,7 +7,7 @@ require('slick-carousel');
 require('flip');
 
 var initContactGallery = function() {
-	if ($(window).width() <= 576) {
+	if ($(window).width() <= 767) {
 		$('.contactsContainer').slick({
 			// normal options...
 			infinite: false,
@@ -15,7 +15,7 @@ var initContactGallery = function() {
 	
 			// the magic
 			responsive: [{
-				breakpoint: 600,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
 					dots: true

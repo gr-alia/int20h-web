@@ -9,11 +9,16 @@
 }
 
 .pageMain-logo {
-    height: 80%;
+    height: 60%;
     max-height: 400px;
 
-    @include for-mobile-and-tablet() {
-        width: 100%;
+    @include for-mobile() {
+        width: 70%;
+        height: auto;
+    }
+    
+    @include for-tablet(){
+        width: 90%;
         max-width: 507px;
         height: auto;
     }
@@ -35,6 +40,11 @@
         padding-top: 100px;
         padding-bottom: 100px;
     }
+
+    @include for-mobile() {
+        padding-top: 50px;
+        padding-bottom: 0;
+	}
 }
 
 .pageMain-title {
@@ -43,11 +53,22 @@
     font-weight: normal;
     line-height: 1.25;
     font-weight: 300;
-    margin-bottom: 0;
     text-align: right;
     color: $main-color-green;
     padding-right: 13%;
     margin-bottom: 30px;
+
+    @include for-mobile() {
+        font-size: 2.4rem;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    
+    @include for-tablet(){
+        font-size: 3.4rem;
+        margin: 0;
+    }
 }
 
 .buttonBox{
@@ -56,6 +77,18 @@
     background:  url("../img/green_brush_stroke.png") no-repeat right bottom;
     align-self: flex-end;
     margin-right: 13%;
+
+    @include for-mobile() {
+        transform: scale(0.6, 0.6);
+        margin-right: 0;
+        align-self: center;
+    }
+    
+    @include for-tablet() {
+        transform: scale(0.7, 0.7);
+        margin-right: 0;
+	}
+    
 }
 
 .pageMain-registerButton{

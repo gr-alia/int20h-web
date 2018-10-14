@@ -4,10 +4,30 @@
         content: "Організатори";
     }
 }
+
+.zigzag-top{
+    width: 100%;
+    height: 55px;
+    background: url("../img/zigzag_green.png") repeat-x;
+    margin-bottom: -32px;
+    z-index: 2;
+    position: relative; 
+}
+.zigzag-bottom{
+    width: 100%;
+    height: 55px;
+    background: url("../img/zigzag_red.png") repeat-x;
+    margin-top: -24px;
+    z-index: 2;
+    position: relative; 
+}
 .orgContainer{
     color: $color-white;
-    
     text-align: left;
+
+    @include for-mobile-and-sm-tablet(){
+        display: flex;
+    }
 }
 .imgBox{
     width: 50%;
@@ -16,47 +36,113 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
+    @include for-mobile{
+        height: 250px;
+    }
+
+    @include for-sm-tablet(){
+        height: 350px;
+    }
 }
 .img01{
     background-image: url("../img/01_org.png");
 }
 .img02{
     background-image: url("../img/02_org.png");
+
+    @include for-mobile-and-sm-tablet(){
+        order: 4;
+    }
 }
 .img03{
     background-image: url("../img/03_org.png");
+
+    @include for-mobile-and-sm-tablet(){
+        order: 6;
+    }
 }
 .img04{
     background-image: url("../img/04_org.png");
+
+    @include for-mobile-and-sm-tablet(){
+        order: 8;
+    }
 }
 .img05{
     background-image: url("../img/05_org.png");
+}
+
+.textBox{
+    padding: 30px;
+
+    @include for-mobile{
+        min-height: 150px;
+    }
+
+    @include for-sm-tablet(){
+        min-height: 250px;
+    }
+
+    @include for-mobile-and-sm-tablet(){
+        padding: 16px;
+    }
 }
 .textBoxLeft{
     width: 50%;
     height: auto;
     background-color: $main-color-red;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0px;
+}
+
+.textBoxLeft-first{
+    padding-top: 30px;
+}
+
+.textBoxLeft-second{
+    @include for-mobile-and-sm-tablet(){
+        order: 5;
+    }
 }
 .textBoxRight{
     width: 50%;
     height: auto;
     background-color: $main-color-green;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0px;
+
 }
+
+.textBoxRight-first{
+    @include for-mobile-and-sm-tablet(){
+        order: 3;
+    }
+}
+
+.textBoxRight-second{
+    @include for-mobile-and-sm-tablet(){
+        order: 7;
+    }
+}
+
 .pageOrganiser-text{
     font-size: 2rem;
-    margin: 30px;
+    margin-bottom: 10px;
+
+    @include for-mobile(){
+        font-size: 1.6rem;
+	}
 
 }
 .details{
-    font-size: 1.6rem; 
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+
+    a{
+        color: $color-white;
+        font-style: italic;
+    }
 }

@@ -3,8 +3,16 @@
     display: inline-block;
     font-weight: 600;
     text-align: center;
-    font-size: 4.8rem;
+    font-size: 4em;
     margin: 10px 0 10px 0;
+
+    @include for-tablet(){
+      font-size: 2.4rem;
+    }
+
+    @include for-mobile(){
+      font-size: 1.4rem;
+    }
 
     > div {
       border: 1px solid;
@@ -29,4 +37,8 @@
     font-size: 2rem;
     color: #dbe1d5;
     font-weight: 500;
+
+    @include for-mobile(){
+      font-size: 1.2rem;
+    }
   }

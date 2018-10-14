@@ -1,5 +1,5 @@
 .pageConditions {
-	padding: 85px 0;
+	padding-top: 85px;
 }
 
 .pageConditions-rulers{
@@ -17,6 +17,10 @@
 	font-weight: 900;
 	margin-left: 5%;
 	margin-bottom: 30px;
+
+	@include for-mobile() {
+		font-size: 4.8rem;
+	}
 }
 
 .conditionsDiv {
@@ -25,10 +29,27 @@
 	line-height: 1.4;
 	padding-left: 15%;
 	color: $color-wine;
+
+	@include for-mobile(){
+		font-size: 2rem;
+	}
+
+	@include for-tablet(){
+		font-size: 3.4rem;
+	}
+
+	@include for-mobile-and-tablet(){
+		padding-left: 5%;
+	}
 }
 
 .listTypeIcon{
 	width: 40px;
 	height: 40px;
 	margin: 10px;
+
+	@include for-mobile(){
+		width: 24px;
+		height: 24px;
+	}
 }

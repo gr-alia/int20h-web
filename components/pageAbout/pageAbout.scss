@@ -2,11 +2,16 @@
 
 .pageAbout {
     padding-bottom: 50px;
-
+    padding-top: 50px;
     p {
         color: $color-text-black;
         font-size: 3rem;
         text-align: left;
+
+        @include for-mobile-and-tablet() {
+            font-size: 2rem;
+        }
+
     }
 }
 
@@ -14,6 +19,9 @@
     &:after {
         content: "Про Int20h";
     }
+}
+.aboutContainer{
+    display: flex;
 }
 .sloganBox{
     display: flex;
@@ -27,23 +35,73 @@
     color: $main-color-green;
     width: 80%;
     margin-left: auto;
+
+    @include for-mobile() {
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    @include for-sm-tablet(){
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+    }
+    
+    @include for-tablet(){
+        font-size: 4.8rem;
+    }
+}
+.timerBox{
+    @include for-mobile() {
+		order: 3;
+    }
+    @include for-sm-tablet(){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.pageAbout-secondRow {
-    margin-top: 40px;
+.firstTextBox{
+    @include for-mobile() {
+		order: 2;
+    }
 }
 
-.pageAbout-1 {
-    width: 80%;
+.secondTextBox{
+    @include for-mobile() {
+		order: 4;
+    }
 }
 
 .pageAbout-2 {
     width: 80%;
+    margin-top: 40px;
+
+    @include for-mobile() {
+        width: 100%;
+    }
+}
+
+.pageAbout-1{
+    width: 80%;
     margin-left: auto;
+    margin-top: 40px;
+
+    @include for-mobile() {
+        width: 100%;
+		margin-left: 0;
+    }
+   
 }
 
 .pageAbout-timerTitle{
     font-weight: 500;
     font-size: 3rem;
     color: $color-text-black;
+
+    @include for-mobile() {
+		font-size: 2rem;
+	}
 }

@@ -1,3 +1,6 @@
+.pagePlace{
+	margin-bottom: 80px;
+}
 .pagePlace-title{
 	color: $main-color-green;
 	line-height: 1;
@@ -5,6 +8,10 @@
 	font-weight: 900;
 	margin-left: 10%;
 	margin-bottom: 30px;
+
+	@include for-mobile() {
+		font-size: 4.8rem;
+	}
 }
 .placeImg{
 	width: 80%;

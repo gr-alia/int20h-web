@@ -1,6 +1,8 @@
 .pageContacts{
 	background-color: $main-color-green;
 	overflow: hidden;
+    padding-top: 40px;
+    margin-top: -40px;
 }
 .pageContacts-title{
 	color: $main-color-beige;
@@ -9,27 +11,35 @@
 	line-height: 1;
 	margin-left: 10%;
 	margin-bottom: 30px;
+
+	@include for-mobile() {
+		font-size: 4.8rem;
+	}
 }
 
 .contactsContainer{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	margin-bottom: 30px;
 }
 .contact{
 	width: 25%;	
 	color: $main-color-green;
 	font-size: 1.6rem;
 	padding: 0 20px;
+
+	@include for-mobile(){
+		padding: 0px 50px;
+	}
+	@include for-sm-tablet(){
+		padding: 0px 100px;
+	}
 }
 
 .imageDiv{
-	
-	
-
 	img{
 		width: 100%;
-		
 		border-radius: 50%;
 	}
 }
@@ -37,7 +47,7 @@
 	width: 100%;
 	padding: 16px;
 	margin-top: 10px;
-	min-height: 131px;
+	min-height: 151px;
 	margin-bottom: 10px;
 	display: flex;
 	flex-direction: column;
@@ -48,6 +58,10 @@
 	.name{
 		font-size: 3.4rem;
 		font-weight: 700; 
+
+		@include for-mobile-and-sm-tablet(){
+			font-size: 2.4rem;
+		}
 	}
 	
 }
@@ -75,9 +89,9 @@
 }
 
 .slick-dots {
-	bottom: 4px;
+	bottom: -34px;
 }
 
 .slick-dotted.slick-slider {
-	margin-bottom: 0;
+	margin-bottom: 50px;
 }

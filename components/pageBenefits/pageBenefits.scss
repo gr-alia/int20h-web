@@ -5,8 +5,7 @@
     position: relative;
 
     .anaglyphTitle{
-        position: absolute;
-        top: -110px;
+        margin-top: -25px;
         &:after {
             content: "Що отримують учасники";
         }
