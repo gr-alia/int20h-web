@@ -2,6 +2,6 @@
 
 @include font-face("Akrobat", "../fonts/Akrobat-Light", 300, $file-formats: ("woff2", "woff"));
 @include font-face("Akrobat", "../fonts/Akrobat-Regular", 400, $file-formats: ("woff2", "woff"));
-@include font-face("Akrobat", "../fonts/Akrobat-Semibold", 500, $file-formats: ("woff2", "woff"));
+@include font-face("Akrobat", "../fonts/Akrobat-SemiBold", 500, $file-formats: ("woff2", "woff"));
 @include font-face("Akrobat", "../fonts/Akrobat-Bold", 600, $file-formats: ("woff2", "woff"));
 @include font-face("Akrobat", "../fonts/Akrobat-ExtraBold", 700, $file-formats: ("woff2", "woff"));
