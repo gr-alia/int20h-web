@@ -29,6 +29,10 @@
       display: inline-block;
       color: #dbe1d5;
       min-width: 2em;
+
+      @include for-mobile(){
+        padding: 12px;
+      }
     }
   }
   
