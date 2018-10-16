@@ -56,7 +56,7 @@
     }
 }
 .img03{
-    background-image: url("../img/03_org.png");
+    background-image: url("../img/03_org.jpg");
 
     @include for-mobile-and-sm-tablet(){
         order: 6;
@@ -74,7 +74,8 @@
 }
 
 .textBox{
-    padding: 30px;
+    padding: 0 50px;
+    min-height: 300px;
 
     @include for-mobile{
         min-height: 150px;

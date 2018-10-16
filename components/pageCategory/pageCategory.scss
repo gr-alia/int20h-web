@@ -36,6 +36,10 @@
 	@include for-mobile() {
 		font-size: 2rem;
 	}
+
+	@include for-tablet(){
+		font-size: 3.4rem;
+	}
 }
 
 .pageCategory-category {

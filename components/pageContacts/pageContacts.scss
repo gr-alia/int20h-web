@@ -18,22 +18,24 @@
 }
 
 .contactsContainer{
+	width: 80%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	margin-bottom: 30px;
+	margin-left: 10%;
 }
 .contact{
 	width: 25%;	
 	color: $main-color-green;
-	font-size: 1.6rem;
-	padding: 0 20px;
+	font-size: 1.8rem;
 
 	@include for-mobile(){
-		padding: 0px 50px;
+		padding: 0px 20px;
+		font-size: 1.6rem;
 	}
 	@include for-sm-tablet(){
-		padding: 0px 100px;
+		padding: 0px 50px;
 	}
 }
 
