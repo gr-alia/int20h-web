@@ -87,8 +87,7 @@
     @include for-tablet() {
         transform: scale(0.7, 0.7);
         margin-right: 0;
-	}
-    
+    }
 }
 
 .pageMain-registerButton{
@@ -99,14 +98,20 @@
     color: $main-color-beige;
     background: url("../img/red_brush_stroke.png") no-repeat;
     padding: 31px 65px 41px 24px;
-    font-weight: 900;
+    font-weight: 300;
     outline:none;
     border: 0px;  
     cursor: pointer;
+    transition:  font-weight .3s ease-in-out;
+
 
     &:active,
     &:focus {
         outline: none;
+    }
+
+    &:hover {
+        font-weight: 900;
     }
 }
 

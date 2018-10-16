@@ -11,11 +11,17 @@
     color: $main-color-green;
 
     &:after {
+        width: 100%;
         position: absolute;
         left: -4px;
         top: -4px;
         color: $main-color-red; 
         mix-blend-mode: multiply;
+
+        @include for-mobile(){
+            left: -2px;
+            top: -2px;
+        }
     }
 
     @include for-mobile() {

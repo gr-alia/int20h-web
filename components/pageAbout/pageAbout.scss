@@ -8,8 +8,12 @@
         font-size: 3rem;
         text-align: left;
 
-        @include for-mobile-and-tablet() {
+        @include for-tablet() {
             font-size: 2rem;
+        }
+
+        @include for-mobile(){
+            font-size: 1.6rem;
         }
 
     }
@@ -54,7 +58,8 @@
 }
 .timerBox{
     @include for-mobile() {
-		order: 3;
+        order: 3;
+        padding: 0 10%;
     }
     @include for-sm-tablet(){
         display: flex;
@@ -65,13 +70,15 @@
 
 .firstTextBox{
     @include for-mobile() {
-		order: 2;
+        order: 2;
+        padding: 0 10%;
     }
 }
 
 .secondTextBox{
     @include for-mobile() {
-		order: 4;
+        order: 4;
+        padding: 0 10%;
     }
 }
 
@@ -101,7 +108,11 @@
     font-size: 3rem;
     color: $color-text-black;
 
-    @include for-mobile() {
+    @include for-tablet() {
 		font-size: 2rem;
-	}
+    }
+    
+    @include for-mobile() {
+		font-size: 1.6rem;
+    }
 }
