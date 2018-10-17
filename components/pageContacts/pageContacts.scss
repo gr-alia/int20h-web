@@ -26,7 +26,7 @@
 	margin-left: 10%;
 }
 .contact{
-	width: 25%;	
+	width: 30%;	
 	color: $main-color-green;
 	font-size: 1.8rem;
 
@@ -36,6 +36,11 @@
 	}
 	@include for-sm-tablet(){
 		padding: 0px 50px;
+	}
+
+	@include for-tablet(){
+		font-size: 1.6rem;
+		width: 30%;
 	}
 }
 
