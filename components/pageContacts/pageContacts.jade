@@ -9,8 +9,8 @@
 						p.name #{obj.name}
 						p.position #{obj.position}
 					.linkDiv
-						p.email #{obj.email}
-						p.phone #{obj.phone}
+						a(href="mailto:#{obj.email}").email #{obj.email}
+						a(href="tel:#{obj.phone}").phone #{obj.phone}
 						a(href='#{obj.link}').linkFb
 							img(src="img/fb.png").iconFb
 					.emptyDiv

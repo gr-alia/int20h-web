@@ -44,6 +44,10 @@
     @include for-sm-tablet(){
         height: 350px;
     }
+
+    @include for-big-desktop(){
+        min-height: 400px;
+    }
 }
 .img01{
     background-image: url("../img/01_org.png");

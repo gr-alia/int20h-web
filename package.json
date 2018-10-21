@@ -24,10 +24,11 @@
     "bourbon": "^4.2.6",
     "chocolat": "^0.4.20",
     "flip": "github:nnattawat/flip",
+    "http-server": "^0.10.0",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.5",
     "slick-carousel": "^1.8.1",
-    "http-server": "^0.10.0"
+    "underscore": "^1.9.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
