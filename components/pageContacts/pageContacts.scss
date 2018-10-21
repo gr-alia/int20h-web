@@ -106,6 +106,12 @@
 	bottom: -34px;
 }
 
+.slick-slide {
+	@include for-big-tablet-and-desktop() {
+		padding-right: 20px;
+	}
+}
+
 .slick-dotted.slick-slider {
 	margin-bottom: 50px;
 }
