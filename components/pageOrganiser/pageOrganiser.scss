@@ -29,7 +29,7 @@
         display: flex;
     }
 }
-.imgBox{
+.orgContainer .imgBox{
     width: 50%;
     height: auto;
     padding: 0px;
@@ -43,6 +43,10 @@
 
     @include for-sm-tablet(){
         height: 350px;
+    }
+
+    @include for-big-desktop(){
+        min-height: 500px;
     }
 }
 .img01{
@@ -131,7 +135,7 @@
 
 .pageOrganiser-text{
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin: 10px;
 
     @include for-mobile(){
         font-size: 1.6rem;

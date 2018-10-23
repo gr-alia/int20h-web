@@ -47,27 +47,45 @@
 	}
 }
 
-.pageMain-title {
+.pageMain-when, .pageMain-where{
     position: relative;
-    font-size: 6rem;
-    font-weight: normal;
     line-height: 1.25;
     font-weight: 300;
     text-align: right;
     color: $main-color-green;
     padding-right: 13%;
-    margin-bottom: 30px;
+
+    @include for-tablet(){
+        margin: 0;
+    }
 
     @include for-mobile() {
-        font-size: 2.4rem;
         text-align: center;
         padding: 0;
         margin-bottom: 0;
     }
-    
+}
+.pageMain-when {
+    font-size: 6rem;
+
     @include for-tablet(){
         font-size: 3.4rem;
-        margin: 0;
+    }
+
+    @include for-mobile() {
+        font-size: 2.4rem;
+    }
+}
+
+.pageMain-where {
+    font-size: 3rem;
+
+    @include for-tablet(){
+        font-size: 2rem;
+    }
+    
+    @include for-mobile() {
+        font-size: 1.6rem;
     }
 }
 
@@ -77,6 +95,10 @@
     background:  url("../img/green_brush_stroke.png") no-repeat right bottom;
     align-self: flex-end;
     margin-right: 13%;
+
+    @include for-desktop(){
+        margin-top: 30px;
+    }
 
     @include for-mobile() {
         transform: scale(0.6, 0.6);

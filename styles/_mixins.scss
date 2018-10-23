@@ -46,3 +46,9 @@
 		@content;
 	}
 }
+
+@mixin for-big-desktop() {
+	@media only screen and (min-width: $media-big-desktop-bp) {
+		@content;
+	}
+}

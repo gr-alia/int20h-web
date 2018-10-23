@@ -82,6 +82,13 @@
 	flex-direction: column;
 	align-items: flex-start;
 	background-color: $main-color-beige;
+	
+
+	a{
+		color: $main-color-green;
+		text-decoration: none;
+	}
+
 }
 
 .iconFb{
@@ -97,6 +104,12 @@
 
 .slick-dots {
 	bottom: -34px;
+}
+
+.slick-slide {
+	@include for-big-tablet-and-desktop() {
+		padding-right: 20px;
+	}
 }
 
 .slick-dotted.slick-slider {

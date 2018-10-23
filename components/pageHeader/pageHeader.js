@@ -7,22 +7,24 @@ require('slick-carousel');
 require('flip');
 
 var initContactGallery = function() {
-	if ($(window).width() <= 767) {
-		$('.contactsContainer').slick({
-			// normal options...
-			infinite: false,
-			arrows: false,
-	
-			// the magic
-			responsive: [{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					dots: true
-				}
-			}]
-		});
-	}
+	$('.contactsContainer').slick({
+		slidesToShow: 3,
+		responsive: [{
+			breakpoint: 1024,
+			settings: {
+				arrows: false,
+				slidesToShow: 3
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				arrows: false,
+				dots: true,
+				slidesToShow: 1
+			}
+		}]
+	});
 };
 
 $(document).ready(function(){
@@ -37,5 +39,4 @@ $(document).ready(function(){
 	);
 
 	initContactGallery();
-	// $(window).on('resize', initContactGallery);
 });
