@@ -16,6 +16,7 @@ var initContactGallery = function() {
 				slidesToShow: 3
 			}
 		},
+
 		{
 			breakpoint: 768,
 			settings: {
@@ -27,10 +28,23 @@ var initContactGallery = function() {
 	});
 };
 
+var firstCardFlipped = false;
+var flipFirstCardOnMobile = function(){
+	var cardElem = $('#firstCard');
+	var cardSourceBottom = cardElem.offset().top;
+	window.onscroll = function() {
+		if (!firstCardFlipped && window.pageYOffset > cardSourceBottom){
+			$('#firstCard').flip('toggle');
+			firstCardFlipped = true;
+		}
+	};
+};
+
 $(document).ready(function(){
 	$('.pageBenefits-card').flip({
 		trigger: 'hover'
 	});
+	flipFirstCardOnMobile();
 
 	$('.pageLast-photos').Chocolat({
 		enableZoom: false,
