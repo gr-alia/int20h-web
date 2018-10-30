@@ -31,9 +31,9 @@ var initContactGallery = function() {
 var firstCardFlipped = false;
 var flipFirstCardOnMobile = function(){
 	var cardElem = $('#firstCard');
-	var cardSourceBottom = cardElem.offset().top;
+	var cardSourceTop = cardElem.offset().top - $(window).height()/3;
 	window.onscroll = function() {
-		if (!firstCardFlipped && window.pageYOffset > cardSourceBottom){
+		if (!firstCardFlipped && window.pageYOffset > cardSourceTop){
 			$('#firstCard').flip('toggle');
 			firstCardFlipped = true;
 		}
@@ -44,7 +44,11 @@ $(document).ready(function(){
 	$('.pageBenefits-card').flip({
 		trigger: 'hover'
 	});
-	flipFirstCardOnMobile();
+
+	if ($(window).width() <= 576) {
+		flipFirstCardOnMobile();
+	}
+
 
 	$('.pageLast-photos').Chocolat({
 		enableZoom: false,

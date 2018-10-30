@@ -22,10 +22,12 @@
 	@media only screen and (max-width: $media-colcarou-plugin-bp - 1) {
 		display: block;
 	}
+
 }
 .placeContainer-desktop{
 	width: 80%;
 	max-width: 1024px;
+	min-height: 530px;
 	display: block;
 	margin-left: 10%;
 
@@ -39,6 +41,17 @@
 		// 	display: block;
 		// }
 	}
+
+	img{
+		&:hover{
+			background-color: $color-black;
+			opacity:0.7;
+
+		}
+	}
+}
+.placeContainer-desktop .imgBox{
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px, rgba(0, 0, 0, 0.19) 0px 4px 20px 0px;
 }
 
 .placeImg{
