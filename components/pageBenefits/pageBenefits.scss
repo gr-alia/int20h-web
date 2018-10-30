@@ -22,20 +22,20 @@
 
 .pageBenefits-cardContainer-1,
 .pageBenefits-cardContainer-4 {
-    @include for-big-tablet-and-desktop() {
+    @include for-desktop() {
         justify-content: flex-end;
     }
 }
 
 .pageBenefits-cardContainer-2 {
-    @include for-big-tablet-and-desktop() {
+    @include for-desktop() {
         justify-content: center;
     }
 }
 
 .pageBenefits-cardContainer-3,
 .pageBenefits-cardContainer-5 {
-    @include for-big-tablet-and-desktop() {
+    @include for-desktop() {
         justify-content: flex-start;
     }
 }
