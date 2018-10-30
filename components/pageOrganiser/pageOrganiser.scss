@@ -50,10 +50,10 @@
     }
 }
 .img01{
-    background-image: url("../img/01_org.png");
+    background-image: url("../img/01_org.jpg");
 }
 .img02{
-    background-image: url("../img/02_org.png");
+    background-image: url("../img/02_org.jpg");
 
     @include for-mobile-and-sm-tablet(){
         order: 4;
@@ -67,14 +67,11 @@
     }
 }
 .img04{
-    background-image: url("../img/04_org.png");
+    background-image: url("../img/04_org.jpg");
 
     @include for-mobile-and-sm-tablet(){
         order: 8;
     }
-}
-.img05{
-    background-image: url("../img/05_org.png");
 }
 
 .textBox{
@@ -144,8 +141,7 @@
 }
 .details{
     font-size: 1.6rem;
-    margin-bottom: 40px;
-
+    margin: 0 10px 40px 10px;
     a{
         color: $color-white;
         font-style: italic;
