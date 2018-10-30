@@ -30,11 +30,11 @@ var initContactGallery = function() {
 
 var firstCardFlipped = false;
 var flipFirstCardOnMobile = function(){
-	var cardElem = $('#firstCard');
+	var cardElem = $('.firstCard');
 	var cardSourceTop = cardElem.offset().top - $(window).height()/3;
 	window.onscroll = function() {
 		if (!firstCardFlipped && window.pageYOffset > cardSourceTop){
-			$('#firstCard').flip('toggle');
+			$('.firstCard').flip('toggle');
 			firstCardFlipped = true;
 		}
 	};
