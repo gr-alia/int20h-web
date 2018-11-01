@@ -14,7 +14,7 @@
   "scripts": {
     "grunt": "grunt",
     "build": "grunt build",
-    "build:prod": "NODE_ENV=production grunt build",
+    "build:prod": "cross-env NODE_ENV=production grunt build",
     "lint": "eslint ./",
     "serve-test": "browser-sync start --server --files 'build/*.html'",
     "serve": "http-server ./build"
@@ -23,6 +23,7 @@
     "bootstrap": "^4.0.0-beta",
     "bourbon": "^4.2.6",
     "chocolat": "^0.4.20",
+    "cross-env": "^5.2.0",
     "flip": "github:nnattawat/flip",
     "http-server": "^0.10.0",
     "jquery": "^3.2.1",
