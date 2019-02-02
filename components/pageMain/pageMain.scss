@@ -135,13 +135,16 @@
   cursor: pointer;
   transition: font-weight .3s ease-in-out;
 
-  &:active,
+  //Uncomment fot enable state
+  /*&:active,
   &:focus {
     outline: none;
   }
 
   &:hover {
     font-weight: 900;
-  }
+  }*/
+
+
 }
 
