@@ -6,9 +6,16 @@ footer{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	a{
+		color: $main-color-beige;
+		font-size: 1.6rem;
+		align-items: center;
+	}
 }
 .copyright{
 	font-size: 1.6rem;
 	margin: 0;
-
 }
+
+
