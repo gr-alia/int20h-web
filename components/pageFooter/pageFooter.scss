@@ -1,21 +1,28 @@
-footer{
-	width: 100%;
-	height: 60px;
-	background-color: $main-color-green;
-	color: $main-color-beige;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	a{
-		color: $main-color-beige;
-		font-size: 1.6rem;
-		align-items: center;
-	}
-}
-.copyright{
-	font-size: 1.6rem;
-	margin: 0;
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: $main-color-green;
+  color: $main-color-beige;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.copyright {
+  font-size: 1.6rem;
+  margin: 0;
+}
 
+.regulations {
+  font-size: 1.6rem;
+
+  &:visited {
+    color: $main-color-beige;
+  }
+
+  &:link {
+    color: $main-color-beige;
+  }
+
+
+}
