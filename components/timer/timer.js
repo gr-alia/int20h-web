@@ -39,6 +39,7 @@ function initializeClock(id, endtime) {
 
 var startDate = new Date(2019, 1, 23, 11);
 var offset = startDate.getTime() - new Date().getTime();
-
 var deadline = new Date(Date.parse(new Date()) + offset);
-initializeClock('timerDiv', deadline);
+if (offset > 0) {
+	initializeClock('timerDiv', deadline);
+}
