@@ -1,16 +1,16 @@
 .pageContacts
 	h1.pageContacts-title Контакти
 	.contactsContainer
-			each obj in [{ name: "Катерина", position: "головний організатор", email: "estefanovich1@gmail.com", phone:"+380638691700", link: "https://www.facebook.com/profile.php?id=100011212662293", img: "kate.png"}, {name: "Анастасія", position: "відділ корпоративних зв'язків", email: "nastiashel@gmail.com", phone:"+380931349664", link: "https://www.facebook.com/anastasiiasheludko", img: "anastasia.png"},{name:"Ірина", position:"відділ корпоративних зв'язків", email: "bezkrovnairyna@gmail.com", phone:"+380999279865", link: "https://www.facebook.com/irina.bezkrovnaya.9", img: "irene.png"} ]
+			each obj in [{ name: "Анастасія", position: "головний організатор", email: "n.lagno@gmail.com", phone:"+380991095969", img: "Anastasia.png"}, {name: "Іван", position: "відділ корпоративних зв'язків", email: "hrytchuk2020@gmail.com", phone:"+380664448509", img: "Ivan.png"},{name:"Дарина", position:"відділ корпоративних зв'язків", email: "kovalchuk192000@gmail.com", phone:"+380967694554", img: "DashaNotMasha.png"} ]
 				.contact
 					.imageDiv
-						img(src="img/#{obj.img}")
+						img(src="img/contacts/#{obj.img}")
 					.nameDiv
 						p.name #{obj.name}
 						p.position #{obj.position}
 					.linkDiv
 						a(href="mailto:#{obj.email}").email #{obj.email}
 						a(href="tel:#{obj.phone}").phone #{obj.phone}
-						a(href='#{obj.link}').linkFb
-							img(src="img/fb.png").iconFb
+					//	a(href='#{obj.link}').linkFb
+					//		img(src="img/fb.png").iconFb
 					.emptyDiv
